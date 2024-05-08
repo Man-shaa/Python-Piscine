@@ -1,8 +1,8 @@
 ft_list = ["Hello", "tata!"]
 ft_tuple = ("Hello", "toto!")
 ft_set = {"Hello", "tutu!"}
-ft_dict = {"Hello" : "titi!"}
-#you
+ft_dict = {"Hello": "titi!"}
+# you
 
 ft_list[1] = "World!"
 
