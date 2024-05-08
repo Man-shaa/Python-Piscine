@@ -50,9 +50,21 @@ NESTED_MORSE = {
     "ß": "...--.. ",
 }
 
+def transform(string: str):
+	morse = ""
+	for char in string.upper():
+		if char in NESTED_MORSE:
+			morse += NESTED_MORSE[char]
+	return morse
+
 def main():
-	if (len(sys.argv) != 2):
+	if len(sys.argv) != 2:
 		raise AssertionError("tuto : python sos.py [string]")
+	if not sys.argv[1].replace(' ', '').isalnum():
+		raise AssertionError("argument should only contain alpha numeric characters")
+	print(transform(sys.argv[1]))
+	return 0
+
 
 if __name__ == "__main__":
 	main()
