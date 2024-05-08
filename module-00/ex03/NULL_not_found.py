@@ -11,4 +11,3 @@ def NULL_not_found(object: any) -> int:
 		case False:
 			return (print("Fake: False", type(object)), 0)
 	return (1)
-  
