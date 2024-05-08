@@ -2,11 +2,11 @@ import sys
 
 def parse_arg(args):
 	if (len(args) != 3):
-		return (print("tuto : \"python filterstring [string] [number]\""), 1)
+		raise AssertionError("tuto : \"python filterstring [string] [number]\"")
 	if (not args[1].replace(' ', '').isalpha()):
-		return (print("first argument must be a string"), 1)
+		raise AssertionError("first argument must be a string")
 	if (not args[2].isdigit()):
-		return (print("second argument must be a number"), 1)
+		raise AssertionError("second argument must be a number")
 	return (0)
 
 def filter_string(string, n):
