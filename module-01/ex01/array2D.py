@@ -14,6 +14,7 @@ def parse_input(family: list, start: int, end: int) -> int:
         raise IndexError("Start index is out of range")
     return (0)
 
+
 def slice_me(family: list, start: int, end: int) -> list:
     if (parse_input(family, start, end) != 0):
         return (None)
