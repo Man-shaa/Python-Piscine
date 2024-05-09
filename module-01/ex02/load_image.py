@@ -3,13 +3,10 @@ import numpy as np
 
 
 def ft_load(path: str) -> np.ndarray:
-    """This function loads an image from the specified file path,
-    prints its format and shape,
-        and prints the content of its pixels in RGB format."""
     try:
         image = Image.open(path)
         if image.format not in ['JPEG', 'JPG']:
-            raise ValueError("The image format should be JPG or JPEG")
+            raise TypeError("The image format should be JPG or JPEG")
         print("The format of the image is:", image.format)
         if image.mode != 'RGB':
             image = image.convert('RGB')
