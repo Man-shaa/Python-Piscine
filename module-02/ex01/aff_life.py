@@ -15,6 +15,7 @@ def aff_life(data_set):
 
     plt.show()
 
+
 def main():
     if (len(sys.argv) != 2):
         raise ValueError("tuto: python aff_life.py [path]")
