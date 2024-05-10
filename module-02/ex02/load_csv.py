@@ -7,8 +7,8 @@ def load(path: str) -> Union[pd.DataFrame, None]:
     try:
         dataset = pd.read_csv(path)
         return (dataset)
-    except Exception as e:
-        raise FileNotFoundError("Failed to load path : {e}", e)
+    except Exception:
+        raise FileNotFoundError("Failed to load path")
 
 
 def main():
