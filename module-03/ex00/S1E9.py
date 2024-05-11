@@ -1,11 +1,13 @@
 from abc import ABC, abstractmethod
 
+
 class Character(ABC):
     """Your docstring for Class"""
     @abstractmethod
     def __init__(this, first_name, is_alive=True):
         this.first_name = first_name
         this.is_alive = is_alive
+
     def die(this):
         """Your docstring for Method die."""
         this.is_alive = False
@@ -19,7 +21,6 @@ class Stark(Character):
 
 
 def main():
-    #your code here
     Ned = Stark("Ned")
     print(Ned.__dict__)
     print(Ned.is_alive)
