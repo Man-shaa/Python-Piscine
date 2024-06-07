@@ -3,13 +3,16 @@ def give_bmi(height: list[int | float],
     """Calculate the Body Mass Index (BMI) for each pair of height and\
     weight provided in the lists."""
     if len(height) != len(weight):
-        raise ValueError("ValueError: Height and weight lists must be of the same length")
+        raise ValueError("ValueError: Height and weight lists must be of\
+        the same length")
     result = []
     for h, w in zip(height, weight):
         if not isinstance(h, (int, float)) or not isinstance(w, (int, float)):
-            raise ValueError("ValueError: Height and weight must be integers or floats")
+            raise ValueError("ValueError: Height and weight must be integers\
+            or floats")
         if h <= 0 or w <= 0:
-            raise ValueError("ValueError: Height and weight must be positive values")
+            raise ValueError("ValueError: Height and weight must be\
+            positive values")
         bmi = w/(h**2)
         result.append(bmi)
     return result

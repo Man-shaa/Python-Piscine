@@ -9,6 +9,7 @@ def load(path: str) -> Union[pd.DataFrame, None]:
     dataset = pd.read_csv(path)
     return (dataset)
 
+
 def main():
     try:
         if (len(sys.argv) != 2):

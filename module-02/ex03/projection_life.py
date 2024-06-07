@@ -28,7 +28,8 @@ def draw_projection_for_year(data, life_expectancy_data, year: str):
 
 def main():
     try:
-        data = load("income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
+        file = "income_per_person_gdppercapita_ppp_inflation_adjusted.csv"
+        data = load(file)
         if (data is None):
             raise ValueError("Unable to load income_[...].csv")
 
