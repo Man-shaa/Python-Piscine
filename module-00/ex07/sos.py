@@ -62,11 +62,15 @@ def transform(string: str):
 
 
 def main():
-    if len(sys.argv) != 2:
-        raise AssertionError("tuto : python sos.py [string]")
-    if not sys.argv[1].replace(' ', '').isalnum():
-        raise AssertionError("argument should only contain alpha \
-            numeric characters")
+    try:
+        if len(sys.argv) != 2:
+            raise AssertionError("tuto : python sos.py [string]")
+        s = sys.argv[1]
+        if not (s.replace(' ', '').isalnum()):
+            raise AssertionError("the arguments are bad")
+    except Exception as e:
+        print(type(e).__name__ + ":", e)
+        return (1)
     print(transform(sys.argv[1]))
     return 0
 

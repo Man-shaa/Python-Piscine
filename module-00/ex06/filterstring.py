@@ -22,7 +22,10 @@ def filter_string(string, condition):
 
 
 def main():
-    if (parse_arg(sys.argv) == 1):
+    try:
+        parse_arg(sys.argv) == 1
+    except Exception as e:
+        print(type(e).__name__ + ":", e)
         return (1)
     print(filter_string(str(sys.argv[1]), lambda x: len(x) > int(sys.argv[2])))
     return (0)

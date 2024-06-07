@@ -20,14 +20,21 @@ def countChar(text) -> None:
 
 
 def main():
-    if (len(sys.argv) > 2):
-        raise AssertionError("Too many arguments")
-    if len(sys.argv) < 2:
-        print("What is the text to count? ")
-        str = input()
-        countChar(str)
-    else:
-        countChar(sys.argv[1])
+    try:
+        if (len(sys.argv) > 2):
+            raise AssertionError("Too many arguments")
+        if len(sys.argv) < 2:
+            print("What is the text to count? ")
+            str = input()
+            countChar(str)
+        else:
+            countChar(sys.argv[1])
+    except EOFError:
+        print("End of File Error")
+        return (1)
+    except Exception as e:
+        print(type(e).__name__ + ":", e)
+        return (1)
     return (0)
 
 
