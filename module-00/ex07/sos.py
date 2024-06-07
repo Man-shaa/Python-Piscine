@@ -52,6 +52,8 @@ NESTED_MORSE = {
 
 
 def transform(string: str):
+    """This function converts a given string into its Morse code\
+    representation using a predefined dictionary."""
     morse = ""
     for char in string.upper():
         if char in NESTED_MORSE:

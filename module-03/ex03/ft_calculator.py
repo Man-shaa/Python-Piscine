@@ -1,20 +1,27 @@
 class calculator:
+    """A simple calculator class that performs basic arithmetic operations on\
+    a list of numbers."""
     def __init__(this, object) -> None:
+        """Initialize the calculator object with a list of numbers."""
         this.object = object
 
     def __add__(this, object) -> None:
+        """Add a given number to each element in the list."""
         this.object = [x + object for x in this.object]
         print(this.object)
 
     def __mul__(this, object) -> None:
+        """Multiply each element in the list by a given number."""
         this.object = [x * object for x in this.object]
         print(this.object)
 
     def __sub__(this, object) -> None:
+        """Subtract a given number from each element in the list."""
         this.object = [x - object for x in this.object]
         print(this.object)
 
     def __truediv__(this, object) -> None:
+        """Divide each element in the list by a given number."""
         if object == 0:
             print("Division by 0 is not allowed")
             return

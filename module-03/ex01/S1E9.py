@@ -5,6 +5,8 @@ class Character(ABC):
     """Your docstring for Class"""
     @abstractmethod
     def __init__(this, first_name, is_alive=True):
+        """Initialize a character with a first name and a status of being\
+        alive."""
         print("In character init")
         this.first_name = first_name
         this.is_alive = is_alive

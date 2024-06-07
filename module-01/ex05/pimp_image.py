@@ -2,7 +2,7 @@ import numpy as np
 
 
 def ft_invert(array: np.array) -> np.array:
-    '''Inverts the color of the image received.'''
+    """Inverts the color of the image received."""
     res = np.full(array.shape, 255, dtype=np.uint8)
     res -= array
     return res

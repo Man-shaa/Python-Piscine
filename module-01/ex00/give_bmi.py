@@ -1,5 +1,7 @@
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
+    """Calculate the Body Mass Index (BMI) for each pair of height and\
+    weight provided in the lists."""
     if len(height) != len(weight):
         raise ValueError("Height and weight lists must be of the same length")
     result = []

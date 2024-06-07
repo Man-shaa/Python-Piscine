@@ -1,8 +1,10 @@
 def is_even(n):
+    """Check if a number is even."""
     return (n % 2 == 0)
 
 
 def ft_filter(func, iterable):
+    """Filter elements from an iterable based on the given function."""
     return [x for x in iterable if func(x)]
 
 

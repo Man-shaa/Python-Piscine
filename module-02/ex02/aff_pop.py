@@ -5,9 +5,7 @@ from load_csv import load
 
 
 def convert_population(population):
-    """
-    this fonction handle the way the population is displayed
-    """
+    """this fonction handle the way the population is displayed"""
     if population.endswith("M"):
         return float(population[:-1]) * 1_000_000
     elif population.endswith("k"):
@@ -17,15 +15,13 @@ def convert_population(population):
 
 
 def millions_formatter(x, pos):
-    """
-    this functions formatte the number on the scale
-        For example, if x is 1500000,
-        the function will return the string "1M".
-    """
+    """This functions formatte the number on the scale."""
     return f'{x / 1e6:.0f}M'
 
 
 def aff_pop(population):
+    """Plot the population comparison between two countries over\
+    the years."""
     country1 = "France"
     country2 = "Belgium"
 

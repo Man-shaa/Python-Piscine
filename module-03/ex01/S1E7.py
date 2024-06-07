@@ -4,6 +4,8 @@ from S1E9 import Character
 class Baratheon(Character):
     """Representing the Baratheon family."""
     def __init__(this, first_name, is_alive=True):
+        """Initialize a Baratheon character with a first name and a status\
+        of being alive."""
         this.first_name = first_name
         this.is_alive = is_alive
         this.family_name = "Baratheon"
@@ -18,12 +20,16 @@ class Baratheon(Character):
         with name, color of eyes and hairs but it goes through repr"""
 
     def __repr__(this) -> str:
+        """Return a string representation of the Baratheon character\
+        for debugging."""
         return (f"Vector: {(this.family_name, this.eyes, this.hairs)}")
 
 
 class Lannister(Character):
     """Representing the Lannister family."""
     def __init__(this, first_name, is_alive=True):
+        """Initialize a Lannister character with a first name and a status\
+        of being alive."""
         this.first_name = first_name
         this.is_alive = is_alive
         this.family_name = "Lannister"
@@ -31,6 +37,7 @@ class Lannister(Character):
         this.hairs = "light"
 
     def die(this):
+        """Set the character's status to dead."""
         this.is_alive = False
 
     def __str__(this) -> str:
@@ -38,10 +45,14 @@ class Lannister(Character):
         with name, color of eyes and hairs but it goes through repr"""
 
     def __repr__(this) -> str:
+        """Return a string representation of the Lannister character\
+        for debugging."""
         return (f"Vector: {(this.family_name, this.eyes, this.hairs)}")
 
     @classmethod
     def create_lannister(this, first_name, is_alive):
+        """Create a Lannister character with the given first name and status\
+        of being alive."""
         instance = this(first_name)
         instance.is_alive = is_alive
         return (instance)

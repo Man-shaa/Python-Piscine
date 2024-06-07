@@ -3,6 +3,9 @@ import numpy as np
 
 
 def ft_load(path: str):
+    """Load an image from the specified file path, ensure it's in JPEG or JPG\
+    format, convert it to RGB mode if necessary, and return the image object.
+    """
     try:
         image = Image.open(path)
         if image.format not in ['JPEG', 'JPG']:

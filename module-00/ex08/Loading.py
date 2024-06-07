@@ -4,6 +4,8 @@ from tqdm import tqdm
 
 
 def ft_tqdm(lst: range) -> None:
+    """This function displays a custom progress bar for the given range\
+    of items, updating the progress as it iterates."""
     total = len(lst)
     length = 64
     for i, item in enumerate(lst):

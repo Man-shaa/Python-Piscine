@@ -1,4 +1,5 @@
 def parse_input(family: list, start: int, end: int) -> int:
+    """Validate the input list and indices for slicing."""
     if not isinstance(family, list):
         raise TypeError("Input must be a list")
     if (len(family) == 0):
@@ -16,6 +17,7 @@ def parse_input(family: list, start: int, end: int) -> int:
 
 
 def slice_me(family: list, start: int, end: int) -> list:
+    """Slice a given list 'family' from index 'start' to 'end'."""
     if (parse_input(family, start, end) != 0):
         return (None)
     print("My shape is:", (len(family), len(family[0])))

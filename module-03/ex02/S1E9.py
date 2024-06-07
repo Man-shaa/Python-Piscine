@@ -5,24 +5,26 @@ class Character(ABC):
     """Your docstring for Class"""
     @abstractmethod
     def __init__(this, first_name, is_alive=True):
-        print("In character init")
+        """Initialize a character with the given first name and status of\
+        being alive."""
         this.first_name = first_name
         this.is_alive = is_alive
 
     @abstractmethod
     def die(this):
-        """Your docstring for Method die."""
+        """Method to set the character's status to not alive."""
         pass
 
 
 class Stark(Character):
     """Your docstring for Class"""
     def __init__(this, first_name, is_alive=True):
-        """Your docstring for Constructor."""
+        """Initialize a Stark character with the given first name and status\
+        of being alive."""
         super().__init__(first_name, is_alive)
 
     def die(this):
-        """Your docstring for Method die."""
+        """Set the status of the Stark character to not alive."""
         this.is_alive = False
 
 

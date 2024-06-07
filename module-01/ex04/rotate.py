@@ -5,18 +5,8 @@ from load_image import ft_load
 
 
 def zoom_image(image, scale=2):
-    """
-    Takes a PIL Image and returns a new image that is a
-        cropped "zoomed-in" version of the original.
-    Parameters:
-    - image: a PIL Image object
-    - scale: the scale factor to zoom. Higher values result
-      in higher zoom levels. Default is 2.
-
-    Returns: a new PIL Image that is a zoomed-in version of the original image
-    The left and top define the upper left corner of the box,
-    while right and bottom define the lower right corner.
-    """
+    """Takes a PIL Image and returns a new image that is a
+    cropped "zoomed-in" version of the original."""
     width, height = image.size
     new_width = width // scale
     new_height = height // scale
@@ -31,13 +21,7 @@ def zoom_image(image, scale=2):
 
 
 def rotate(image):
-    """
-    Rotate/transpose the input image.
-    Args:
-        image (PIL.Image.Image): The input image.
-    Returns:
-        PIL.Image.Image: The transposed image.
-    """
+    """Rotate/transpose the input image."""
     img_d = np.array(image)
     transposed_data = [[row[i] for row in img_d] for i in range(len(img_d[0]))]
     return Image.fromarray(np.uint8(transposed_data))

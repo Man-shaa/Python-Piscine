@@ -4,6 +4,8 @@ from load_image import ft_load
 
 
 def zoom_image(image, scale=2):
+    """Zooms the given image by the specified scale, cropping it from\
+    the center."""
     width, height = image.size
     new_width = width // scale
     new_height = height // scale

@@ -2,6 +2,9 @@ import sys
 
 
 def parse_arg(args):
+    """This function validates the command-line arguments, ensuring there\
+    are exactly three,
+    the first argument is an alphanumeric string, and the second is a digit."""
     if (len(args) != 3):
         raise AssertionError("tuto : \"python filterstring \
             [string] [number]\"")
@@ -13,6 +16,8 @@ def parse_arg(args):
 
 
 def filter_string(string, condition):
+    """This function filters a given string, returning a list of words\
+    that satisfy the specified condition."""
     return [word for word in string.split() if condition(word)]
 
 

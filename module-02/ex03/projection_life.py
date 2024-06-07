@@ -3,13 +3,8 @@ import matplotlib.pyplot as plt
 
 
 def draw_projection_for_year(data, life_expectancy_data, year: str):
-    """
-    Draw a scatter plot of life expectancy vs GNP per capita for a given year.
-    Args:
-        year (str): The year for which the data will be plotted.
-    Returns:
-        None
-    """
+    """Draw a scatter plot of life expectancy vs GNP per capita for a\
+    given year."""
     if data is not None and life_expectancy_data is not None:
         gnp_year = data[['country', year]]
         life_exp_year = life_expectancy_data[['country', year]]
