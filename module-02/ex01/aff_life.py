@@ -19,11 +19,14 @@ def aff_life(data_set):
 
 
 def main():
-    if (len(sys.argv) != 2):
-        raise ValueError("tuto: python aff_life.py [path]")
-    data_set = load(sys.argv[1])
-    aff_life(data_set)
-    pass
+    try:
+        if (len(sys.argv) != 2):
+            raise ValueError("tuto: python aff_life.py [path]")
+        data_set = load(sys.argv[1])
+        aff_life(data_set)
+    except Exception as e:
+        print(type(e).__name__ + ":", e)
+        return (1)
 
 
 if __name__ == "__main__":

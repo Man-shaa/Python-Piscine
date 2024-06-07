@@ -54,11 +54,14 @@ def aff_pop(population):
 
 
 def main():
-    if (len(sys.argv) != 2):
-        raise ValueError("tuto: python aff_pop.py [path]")
-    population_set = load(sys.argv[1])
-    aff_pop(population_set)
-
+    try:
+        if (len(sys.argv) != 2):
+            raise ValueError("tuto: python aff_pop.py [path]")
+        population_set = load(sys.argv[1])
+        aff_pop(population_set)
+    except Exception as e:
+        print(type(e).__name__ + ":", e)
+        return (1)
 
 if __name__ == "__main__":
     main()

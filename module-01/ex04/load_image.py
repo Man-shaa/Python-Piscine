@@ -23,6 +23,14 @@ def ft_load(path: str):
         print("An error occurred:", e)
 
 
-if __name__ == "__main__":
+def main():
     image_path = "animal.jpeg"
-    ft_load(image_path)
+    try:
+        ft_load(image_path)
+    except Exception as e:
+        print(type(e).__name__ + ":", e)
+        return (1)
+
+
+if __name__ == "__main__":
+    main()

@@ -27,14 +27,18 @@ def draw_projection_for_year(data, life_expectancy_data, year: str):
 
 
 def main():
-    data = load("income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
-    if (data is None):
-        raise ValueError("Unable to load income_[...].csv")
+    try:
+        data = load("income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
+        if (data is None):
+            raise ValueError("Unable to load income_[...].csv")
 
-    life_expectancy_data = load("life_expectancy_years.csv")
-    if (life_expectancy_data is None):
-        raise ValueError("Unable to load life_expectancy_years.csv")
-    draw_projection_for_year(data, life_expectancy_data, '1900')
+        life_expectancy_data = load("life_expectancy_years.csv")
+        if (life_expectancy_data is None):
+            raise ValueError("Unable to load life_expectancy_years.csv")
+        draw_projection_for_year(data, life_expectancy_data, '1900')
+    except Exception as e:
+        print(type(e).__name__ + ":", e)
+        return (1)
 
 
 if __name__ == "__main__":
