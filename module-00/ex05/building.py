@@ -3,11 +3,9 @@ import string
 
 
 def countChar(text) -> None:
-    """
-    This function counts and prints the number of uppercase letters,\
+    """This function counts and prints the number of uppercase letters,\
     lowercase letters,
-    punctuation marks, spaces, and digits in the given text.
-    """
+    punctuation marks, spaces, and digits in the given text."""
     count_uppercase = sum(1 for char in text if char.isupper())
     count_lowercase = sum(1 for char in text if char.islower())
     count_punctuation = sum(1 for char in text if char in string.punctuation)
@@ -22,10 +20,15 @@ def countChar(text) -> None:
 
 
 def main():
-    if (len(sys.argv) != 2):
-        print("ERROR")
-        return (1)
-    countChar(sys.argv[1])
+    if (len(sys.argv) > 2):
+        raise AssertionError("Too many arguments")
+    if len(sys.argv) < 2:
+        print("What is the text to count? ")
+        str = input()
+        countChar(str)
+    else:
+        countChar(sys.argv[1])
+    # countChar(sys.argv[1])
     return (0)
 
 
