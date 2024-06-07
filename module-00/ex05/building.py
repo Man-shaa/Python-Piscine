@@ -28,7 +28,6 @@ def main():
         countChar(str)
     else:
         countChar(sys.argv[1])
-    # countChar(sys.argv[1])
     return (0)
 
 
