@@ -43,8 +43,6 @@ def main():
     print(np.array(img_transposed))
 
     plt.imshow(img_transposed)
-    # plt.xticks([])
-    # plt.yticks([])
     plt.show()
 
 
